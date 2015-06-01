@@ -1,0 +1,5 @@
+This webapp is used to divide the bills evenly between two people.
+
+To add entries you would go to the add tab and import a CSV file obtained from your banking website.
+
+The website will then itemize the entries allowing the user to tag them with their own custom made tags (ex: electricity, groceries, restaurants) and then save the entries to the database.

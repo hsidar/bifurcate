@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   
   root 'bills#index'
   
+  get 'bills/show'
+  
   post 'entry' => 'bills#add_entry'
 
   # The priority is based upon order of creation: first created -> highest priority.

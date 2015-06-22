@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'bills/index'
+
+  get 'bills/add_entry'
+
+  get 'bills/show_month'
+  
+  root 'bills#index'
+  
+  post 'entry' => 'bills#add_entry'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

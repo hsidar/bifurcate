@@ -25,10 +25,16 @@ class BillsController < ApplicationController
   end
 
   def show
-    @data = Entry.where(tag: nil)
+    @entries = Entry.where(tag: nil)
     @tags = Tag.all 
+  end
+  
+  def update
+    Entry.where(id: params[:entry_ids]).update_all(tag: params[:tag])
+    redirect_to '/bills/show'
   end
   
   def show_month
   end
+  
 end

@@ -1,0 +1,19 @@
+<%= form_tag '/bills/update' do %>
+ 
+<%= select_tag :tag, options_from_collection_for_select(@tags, :name, :name) %>
+ 
+  <ul>
+
+  <% @entries.each do |entry| %>
+    <li>
+      
+      <%= check_box_tag "entry_ids[]", entry.id %>
+      <%= entry.description %> <%= entry.date %> <%=entry.amount %>
+      
+    </li>
+  <% end %>
+
+  </ul>
+  <%= submit_tag "tag" %>
+  
+<% end %>
